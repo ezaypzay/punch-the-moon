@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Punch the Moon Privacy &amp; Support</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+<style>
+  /* One reading column under a night-street masthead: a quick-glance table, then the full policy and support. */
+  :root {
+    --page: #f4f3f8; --panel: #ffffff; --ink: #17182a; --muted: #5b5e76; --rule: #dfdfea;
+    --amber: #a35f00; --coral: #e2604f; --mast: #141b3a; --mast-ink: #fdf6e6; --mast-muted: #c6c2d8;
+    --font-display: "Bangers", "Impact", system-ui, sans-serif;
+    --font-body: "Atkinson Hyperlegible", "Segoe UI", system-ui, -apple-system, sans-serif;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --page: #0d0f1e; --panel: #151a33; --ink: #ecebf6; --muted: #a3a6c2; --rule: #2a2f4e;
+      --amber: #fac775; --coral: #ff8a78; --mast: #090c1c; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --page: #0d0f1e; --panel: #151a33; --ink: #ecebf6; --muted: #a3a6c2; --rule: #2a2f4e;
+    --amber: #fac775; --coral: #ff8a78; --mast: #090c1c; color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink); font-family: var(--font-body); font-size: 1.0625rem; line-height: 1.65; }
+  .wrap { max-width: 44rem; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  .mast { background: radial-gradient(circle at 86% 30%, #efe7cf 0 34px, #d9cfb3 35px 38px, transparent 39px), var(--mast); color: var(--mast-ink); }
+  .mast .wrap { padding-block: 2.5rem 2.25rem; }
+  .mast h1 { font-family: var(--font-display); font-weight: 400; font-size: clamp(2.2rem, 7vw, 3rem); line-height: 1.05; margin: 0; letter-spacing: 0.02em; text-wrap: balance; }
+  .mast h1 span { color: #fac775; }
+  .mast p { margin: 0.4rem 0 0; color: var(--mast-muted); font-size: 0.95rem; }
+  nav.toc { border-bottom: 1px solid var(--rule); }
+  nav.toc .wrap { display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; padding-block: 0.9rem; font-size: 0.9rem; }
+  nav.toc a { color: var(--muted); text-decoration: none; }
+  nav.toc a:hover, nav.toc a:focus-visible { color: var(--ink); text-decoration: underline; }
+  main .wrap { padding-block: 2rem 4rem; }
+  h2 { font-family: var(--font-display); font-weight: 400; letter-spacing: 0.03em; font-size: 1.7rem; line-height: 1.2; margin: 2.6rem 0 0.6rem; }
+  h3 { font-size: 1.05rem; margin: 1.5rem 0 0.35rem; }
+  p, ul { margin: 0 0 1rem; }
+  ul { padding-left: 1.25rem; }
+  li + li { margin-top: 0.35rem; }
+  a { color: inherit; text-decoration-color: var(--coral); text-underline-offset: 3px; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--amber); outline-offset: 2px; border-radius: 2px; }
+  .lede { font-size: 1.15rem; }
+  .glance { overflow-x: auto; margin: 0 0 1rem; border: 1px solid var(--rule); border-radius: 10px; background: var(--panel); }
+  table { border-collapse: collapse; width: 100%; min-width: 34rem; font-size: 0.95rem; }
+  th, td { text-align: left; vertical-align: top; padding: 0.7rem 0.9rem; border-bottom: 1px solid var(--rule); }
+  tr:last-child td { border-bottom: 0; }
+  th { font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+  td:first-child { font-weight: 700; }
+  .contact { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem; background: var(--panel); border: 1px solid var(--rule); border-radius: 10px; padding: 1rem 1.1rem; margin: 0 0 1rem; }
+  .contact .label { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); width: 100%; }
+  .email { font-weight: 700; font-size: 1.1rem; user-select: all; overflow-wrap: anywhere; min-width: 0; }
+  .copy { font: inherit; font-size: 0.9rem; padding: 0.35rem 0.8rem; border-radius: 999px; cursor: pointer; border: 1px solid var(--rule); background: transparent; color: var(--ink); }
+  .copy:hover { border-color: var(--coral); }
+  .meta { color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--rule); padding-top: 1.25rem; margin-top: 3rem; }
+</style>
+</head>
+<body>
+<header class="mast">
+  <div class="wrap">
+    <h1>Punch the Moon <span>Privacy &amp; Support</span></h1>
+    <p>Effective November 4, 2026 · Quasar Studios</p>
+  </div>
+</header>
+
+<nav class="toc" aria-label="On this page">
+  <div class="wrap">
+    <a href="#glance">At a glance</a>
+    <a href="#device">On your device</a>
+    <a href="#partners">Partners</a>
+    <a href="#tracking">Tracking</a>
+    <a href="#children">Children</a>
+    <a href="#choices">Your choices</a>
+    <a href="#support">Support</a>
+  </div>
+</nav>
+
+<main>
+  <div class="wrap">
+    <p class="lede">Punch the Moon is a free iPhone game paid for by ads. You don't make an account, and we never ask for your name, email, contacts or photos. This page explains what data the game and its partners handle, and how to reach us.</p>
+
+    <h2 id="glance">At a glance</h2>
+    <div class="glance">
+      <table>
+        <thead><tr><th>Who</th><th>What</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td>The game (on your iPhone)</td><td>Your stage, cash, upgrades, crew, Moon Rocks, trophies, outfits, missions and settings</td><td>To save your progress on your phone.</td></tr>
+          <tr><td>Apple iCloud</td><td>A copy of your game save, if you're signed in to iCloud</td><td>So deleting the app or changing phones doesn't wipe your progress. Stored in your own iCloud; we can't see it.</td></tr>
+          <tr><td>Google AdMob</td><td>Device and advertising identifiers, approximate location from IP address, ad views and taps, crash and performance data</td><td>To show ads, measure them, and prevent fraud</td></tr>
+          <tr><td>Apple Game Center</td><td>Your best stage, Boss Rush scores and achievements, if you're signed in to Game Center</td><td>Leaderboards and achievements. Optional.</td></tr>
+          <tr><td>Apple</td><td>Purchase of Remove Ads</td><td>Apple processes the payment. We never see your card or Apple ID details.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="device">What the game stores on your device</h2>
+    <p>Your progress (stage, cash, gym upgrades, crew, physique, Moon Rocks, trophies, outfits, daily missions, login streak) and your settings are saved on your iPhone. If you're signed in to iCloud, a copy of the save is also kept in your own iCloud account (key-value storage) so you can pick up where you left off after reinstalling or on a new iPhone. We never receive a copy. To remove the iCloud copy, turn off iCloud for Punch the Moon in iPhone Settings → [your name] → iCloud. If you allow reminders, the game schedules them on your phone; nothing is sent to us. A Remove Ads purchase is tied to your Apple ID and can be brought back with <strong>Restore Purchases</strong> in the game's MENU.</p>
+
+    <h2 id="partners">Data collected by our partners</h2>
+    <h3>Google AdMob (ads)</h3>
+    <p>AdMob shows the ads in Punch the Moon: optional reward ads (such as the Protein Shake, the Mystery Gym Bag or more time in a boss fight) and occasional ads after boss fights. To do this, Google's software may collect your device's advertising identifier (only if you allow tracking), other device identifiers, your approximate location estimated from your IP address, which ads you see and tap, and crash and performance data. Google uses this to deliver and measure ads, limit how often you see the same ad, and detect fraud. Read <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">how Google uses information from apps that use its services</a> and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's privacy policy</a>.</p>
+    <h3>Apple (Game Center, iCloud and purchases)</h3>
+    <p>If you're signed in to Game Center, your scores and achievements go to Apple so they can appear on leaderboards. The optional Remove Ads purchase is handled entirely by Apple. See <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's privacy policy</a>.</p>
+    <p>We don't sell your personal information, and we don't share data with anyone other than the partners above.</p>
+
+    <h2 id="tracking">Tracking permission</h2>
+    <p>After your first boss knockout, Punch the Moon shows Apple's prompt asking whether the game may track your activity across other companies' apps and websites. If you allow it, AdMob may use your advertising identifier to show more relevant ads. If you don't, you see the same number of ads, just less personalized ones. The game works exactly the same either way.</p>
+
+    <h2 id="children">Children</h2>
+    <p>Punch the Moon is not directed at children under 13, and we don't knowingly collect personal information from them. If you believe a child has provided personal information through the game, contact us and we'll help remove it.</p>
+
+    <h2 id="choices">Your choices</h2>
+    <ul>
+      <li><strong>Change tracking permission:</strong> iPhone Settings → Privacy &amp; Security → Tracking → Punch the Moon.</li>
+      <li><strong>Reset your advertising identifier or limit ad personalization:</strong> see Apple's settings under Privacy &amp; Security → Apple Advertising.</li>
+      <li><strong>Turn reminders off:</strong> the game's MENU → REMINDERS, or iPhone Settings → Notifications → Punch the Moon.</li>
+      <li><strong>Remove ads after boss fights:</strong> buy Remove Ads in the game's MENU.</li>
+      <li><strong>Delete game data:</strong> delete the app, and turn off iCloud for Punch the Moon to remove the iCloud copy.</li>
+      <li><strong>Ask about or delete data held by our ad partner:</strong> contact us at the address below and we'll pass the request to Google.</li>
+    </ul>
+    <p>Depending on where you live (for example, the EU, UK or California), you may have rights to access, correct or delete personal data held about you. Contact us to make a request.</p>
+
+    <h2 id="support">Support</h2>
+    <div class="contact">
+      <span class="label">Email us</span>
+      <span class="email" id="email">josh@quasarnyc.com</span>
+      <button class="copy" type="button" id="copy-email">Copy address</button>
+    </div>
+    <h3>Common questions</h3>
+    <ul>
+      <li><strong>I bought Remove Ads on another phone, or reinstalled the game.</strong> Open the MENU and tap <strong>Restore Purchases</strong>.</li>
+      <li><strong>My progress disappeared.</strong> Progress is saved only on the phone, so deleting the game resets it. We can't recover it.</li>
+      <li><strong>An ad didn't give me my reward.</strong> Rewards are only given when an ad plays to the end. If it did and you still got nothing, email us with what happened.</li>
+      <li><strong>I'm stuck on a boss.</strong> Train up in the GYM (the Squat Rack boosts boss damage), hire more crew, and tap fast when a boss winds up to stop its attack.</li>
+    </ul>
+    <p class="meta">If this policy changes, we'll update this page and the effective date at the top. Questions about privacy go to the email address above.</p>
+  </div>
+</main>
+
+<script>
+  (function () {
+    var btn = document.getElementById('copy-email');
+    var email = document.getElementById('email');
+    btn.addEventListener('click', function () {
+      var text = email.textContent.trim();
+      function done(msg) { btn.textContent = msg; setTimeout(function () { btn.textContent = 'Copy address'; }, 1800); }
+      function selectIt() {
+        var r = document.createRange(); r.selectNodeContents(email);
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+        done('Selected');
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function () { done('Copied'); }, selectIt);
+      } else { selectIt(); }
+    });
+  })();
+</script>
+</body>
+</html>

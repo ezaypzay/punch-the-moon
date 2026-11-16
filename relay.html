@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>relay</title></head><body>
+<script>
+// Hands the 6.3-inch App Store screenshots to the App Store Connect page that embeds this one.
+(async () => {
+  const files = [];
+  for (let i = 1; i <= 6; i++) {
+    const name = '0' + i + '_6.3in.png';
+    const blob = await fetch('shots/' + name).then(r => r.blob());
+    files.push({ name, blob });
+  }
+  parent.postMessage({ ptmShots: files }, 'https://appstoreconnect.apple.com');
+})();
+</script>
+</body></html>
